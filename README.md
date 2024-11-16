@@ -1,9 +1,10 @@
 # Smart-Irrigation-System-IoT
 #
 **INTRODUCTION<br>**
-The API is used to predict for prediction of Soil Status. The Training model for this is <a href="https://github.com/PersonXXIII/Smart-Irrigation-System-Training">here.</a> and for the IoT system, you can visit the repo <a href="https://github.com/PersonXXIII/Smart-Irrigation-System-IoT">here.</a><br>
+This is the IoT part of the Smart Irrigation System which collects data and send it to the <a href="https://github.com/PersonXXIII/Smart-Irrigation-System-API">API</a>, then get the response for further action. <br>
+Platform: <a href="https://wokwi.com/">Wokwi</a><br>
 #
-**/dashboard UI<br>**
+**Media<br>**
 1. Images:<br>
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
 <img src="https://i.imgur.com/4ozJMcO.png" alt="Dashboard UI 1" style="width: 300px; height: auto;">
