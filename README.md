@@ -5,11 +5,9 @@ This is the IoT part of the Smart Irrigation System which collects data and send
 Platform: <a href="https://wokwi.com/">Wokwi</a><br>
 #
 **Media<br>**
-1. Images:<br>
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
 <img src="https://i.imgur.com/4ozJMcO.png" alt="Dashboard UI 1" style="width: 300px; height: auto;">
 </div>
-2. Video:<br><br>
 
 [![Watch the video](https://img.youtube.com/vi/p7shjgIEM38/0.jpg)](https://youtu.be/p7shjgIEM38)
 
