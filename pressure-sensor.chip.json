@@ -1,0 +1,24 @@
+{
+  "name": "Pressure Sensor",
+  "author": "Anonymous maker",
+  "pins": [
+    "GND",
+    "VCC",
+    "A0",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "controls": [
+    {
+      "id": "pressure",
+      "label": "Soil Pressure",
+      "type": "range",
+      "min": 99,
+      "max": 1100,
+      "step": 1
+    }
+  ]
+}

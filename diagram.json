@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "author": "Ibrahim Tahseen",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": 285, "left": 300.4, "attrs": {} },
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 27.66,
+      "left": 390.5,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay1",
+      "top": 156.6,
+      "left": 618,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": 499.5,
+      "left": 186.6,
+      "rotate": 270,
+      "attrs": { "temperature": "16.9" }
+    },
+    {
+      "type": "chip-soil-moisture-sensor",
+      "id": "chip1",
+      "top": 346.58,
+      "left": 160.6,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "chip-pressure-sensor",
+      "id": "chip2",
+      "top": 442.58,
+      "left": 160.6,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 63.6,
+      "left": 589.4,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 109.85,
+      "left": 574.6,
+      "rotate": 180,
+      "attrs": { "value": "1000" }
+    },
+    { "type": "wokwi-led", "id": "led2", "top": 63.6, "left": 656.6, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 109.85,
+      "left": 651.4,
+      "rotate": 180,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "chip-altitude-sensor",
+      "id": "chip3",
+      "top": 394.58,
+      "left": 160.6,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay2",
+      "top": 156.6,
+      "left": 541.2,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 140.8,
+      "left": 821.6,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:3V3", "bb1:tp.1", "green", [ "h0" ] ],
+    [ "esp:GND.2", "bb1:tn.1", "black", [ "h-134.4", "v230.5" ] ],
+    [ "bb1:tp.2", "bb1:4t.a", "green", [ "v0" ] ],
+    [ "bb1:tn.3", "bb1:5t.a", "black", [ "v0" ] ],
+    [ "chip1:GND", "bb1:5t.b", "black", [ "h0" ] ],
+    [ "chip2:GND", "bb1:5t.c", "black", [ "h0" ] ],
+    [ "chip3:GND", "bb1:5t.d", "black", [ "h0" ] ],
+    [ "chip1:VCC", "bb1:4t.b", "green", [ "h0" ] ],
+    [ "chip2:VCC", "bb1:4t.c", "green", [ "h0" ] ],
+    [ "chip3:VCC", "bb1:4t.d", "green", [ "h0" ] ],
+    [ "dht1:VCC", "bb1:4t.e", "green", [ "h83.7", "v-197.1" ] ],
+    [ "esp:33", "bb1:12t.a", "cyan", [ "h-7.94", "v142.71" ] ],
+    [ "esp:35", "bb1:10t.a", "magenta", [ "v0" ] ],
+    [ "esp:34", "bb1:9t.a", "yellow", [ "v0" ] ],
+    [ "esp:32", "bb1:11t.a", "purple", [ "v0" ] ],
+    [ "chip1:A0", "bb1:12t.c", "cyan", [ "h0" ] ],
+    [ "chip3:A0", "bb1:10t.c", "magenta", [ "h144", "v-57.6" ] ],
+    [ "chip2:A0", "bb1:9t.c", "yellow", [ "h0" ] ],
+    [ "dht1:SDA", "bb1:11t.c", "purple", [ "h0" ] ],
+    [ "dht1:GND", "bb1:5t.d", "black", [ "h0" ] ],
+    [ "bb1:tp.16", "bb1:21t.a", "green", [ "v0" ] ],
+    [ "bb1:tn.17", "bb1:22t.a", "black", [ "v0" ] ],
+    [ "led2:C", "r2:1", "black", [ "v0" ] ],
+    [ "relay1:GND", "bb1:22t.b", "black", [ "h-25.6", "v106" ] ],
+    [ "relay1:IN", "bb1:20t.c", "violet", [ "h-16", "v106.2" ] ],
+    [ "led2:A", "relay1:NO", "green", [ "v0" ] ],
+    [ "r2:2", "bb1:22t.b", "black", [ "h-18", "v105.6", "h-182.4" ] ],
+    [ "esp:2", "bb1:20t.a", "violet", [ "h9.6", "v249.6" ] ],
+    [ "relay1:VCC", "bb1:21t.b", "green", [ "h-38.4", "v115.2" ] ],
+    [ "relay1:COM", "bb1:21t.d", "green", [ "v123.4", "h-171.6" ] ],
+    [ "led1:C", "r1:1", "black", [ "h0" ] ],
+    [ "led1:A", "relay2:NO", "green", [ "h0" ] ],
+    [ "r1:2", "bb1:22t.c", "black", [ "v0" ] ],
+    [ "relay2:GND", "bb1:22t.d", "black", [ "h-19.2", "v191.6" ] ],
+    [ "relay2:VCC", "bb1:21t.e", "green", [ "v0" ] ],
+    [ "relay2:COM", "bb1:21t.e", "green", [ "v0" ] ],
+    [ "relay2:IN", "bb1:19t.b", "orange", [ "v0" ] ],
+    [ "bb1:tp.32", "bb1:40t.a", "green", [ "v0" ] ],
+    [ "bb1:tn.33", "bb1:41t.a", "black", [ "v0" ] ],
+    [ "lcd1:GND", "bb1:41t.b", "black", [ "h-48", "v172.8" ] ],
+    [ "lcd1:VCC", "bb1:40t.c", "red", [ "h-38.4", "v172.9" ] ],
+    [ "esp:4", "bb1:42t.a", "gray", [ "v-28.8", "h240", "v278.4" ] ],
+    [ "esp:16", "bb1:43t.a", "white", [ "v-19.2", "h259.2" ] ],
+    [ "lcd1:SDA", "bb1:42t.d", "gray", [ "h-28.8", "v173", "h-76.8" ] ],
+    [ "lcd1:SCL", "bb1:43t.e", "white", [ "h-19.2", "v173.1" ] ],
+    [ "esp:15", "bb1:19t.a", "orange", [ "h-9.6", "v249.6" ] ]
+  ],
+  "dependencies": {}
+}
